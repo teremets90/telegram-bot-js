@@ -1,6 +1,8 @@
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 
+console.log('Файл bot.js запущен');
+
 // Открытие базы и экспорт функций
 export async function openDb() {
   return open({
@@ -37,3 +39,5 @@ export async function saveUser(user) {
   );
   await db.close();
 }
+
+console.log('Бот запускается...');
