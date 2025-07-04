@@ -38,7 +38,7 @@ bot.hears('Далее', (ctx) => {
 });
 
 // Обработка ввода имени
-bot.on('text', (ctx, next) => {
+bot.on('text', async (ctx, next) => {
   if (ctx.session.waitingForName) {
     ctx.session.name = ctx.message.text;
     ctx.session.waitingForName = false;
